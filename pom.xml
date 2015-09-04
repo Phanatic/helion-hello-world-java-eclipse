@@ -6,6 +6,9 @@
     <artifactId>hello-world-java</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
+    <properties>
+    	<maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
+    </properties>
     <build>
       <directory>build</directory>
       <outputDirectory>build\classes</outputDirectory>
@@ -17,6 +20,10 @@
           <webXml>${basedir}\WebContent\WEB-INF\web.xml</webXml>
         </configuration>
       </plugin>
+      <plugin>
+	    <artifactId>maven-compiler-plugin</artifactId>
+	    <version>${maven-compiler-plugin.version}</version>
+	</plugin>
     </plugins>
     </build>
     <dependencies>
